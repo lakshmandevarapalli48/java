@@ -1,0 +1,16 @@
+class Solution {
+    public int countDigits(int n) {
+        // Initialize a variable to keep track of the count
+        int count = 0;
+        
+        // Loop until n becomes 0
+        while (n > 0) {
+            // Remove the last digit from n
+            n = n / 10;
+            // Increment the count for each digit removed
+            count++;
+        }
+        
+        return count;
+    }
+}
