@@ -1,0 +1,27 @@
+import java.util.*;
+
+class Solution {
+    public static ArrayList<Integer> commonElements(int a[], int b[]) {
+        // Map to store frequency of elements in array a
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int num : a) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        ArrayList<Integer> result = new ArrayList<>();
+
+        // Check elements of array b against the map
+        for (int num : b) {
+            if (map.containsKey(num) && map.get(num) > 0) {
+                result.add(num);
+                // Decrement count so we don't over-count duplicates
+                map.put(num, map.get(num) - 1);
+            }
+        }
+
+        // The problem requires the output to be in sorted order
+        Collections.sort(result);
+        
+        return result;
+    }
+}
