@@ -1,0 +1,21 @@
+import java.util.*;
+
+class Solution {
+    // Function to return an ArrayList with exact result and formatted result
+    static ArrayList<Float> divisionWithPrecision(float a, float b) {
+        ArrayList<Float> result = new ArrayList<>();
+        
+        // 1. Calculate the exact result
+        float exactResult = a / b;
+        
+        // 2. Round the result to 3 decimal places
+        // We use Math.round(val * 1000) / 1000.0f to get 3 decimal places
+        float roundedResult = (float) Math.round(exactResult * 1000.0f) / 1000.0f;
+        
+        // Add both to the list
+        result.add(exactResult);
+        result.add(roundedResult);
+        
+        return result;
+    }
+}
