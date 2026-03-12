@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+class Geeks {
+    void getInput() {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();   // read integer
+        sc.nextLine();          // clear buffer
+
+        String s = sc.nextLine();  // read full line
+
+        System.out.println(n);
+        System.out.println(s);
+    }
+}
