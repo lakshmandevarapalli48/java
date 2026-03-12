@@ -1,0 +1,23 @@
+class Solution {
+    public void calculate(int a, int b, int operator) {
+        // We use a switch statement to check the operator value
+        switch (operator) {
+            case 1:
+                // Add a and b
+                System.out.print(a + b);
+                break;
+            case 2:
+                // Subtract b from a
+                System.out.print(a - b);
+                break;
+            case 3:
+                // Multiply a and b
+                System.out.print(a * b);
+                break;
+            default:
+                // Any other number is invalid
+                System.out.print("Invalid Input");
+                break;
+        }
+    }
+}
