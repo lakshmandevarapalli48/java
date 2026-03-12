@@ -1,0 +1,6 @@
+class Solution {
+    static void printHelloWorld() {
+        // Just add this line inside the function:
+        System.out.println("Hello World");
+    }
+}
